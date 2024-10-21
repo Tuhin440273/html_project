@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 600px; }
+        input[type="text"] { width: 100%; padding: 10px; margin-bottom: 10px; }
+        button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Video Downloader</h1>
+        <label for="video-link">Paste YouTube Video Link:</label>
+        <input type="text" id="video-link" placeholder="https://youtu.be/RVh647FkPtA">
+        <button id="download-button">Download Video</button>
+
+        <h2>Download Option</h2>
+        <p>
+            <a href="download-link-for-video.mp4" download="MyVideo.mp4" id="actual-download" style="display:none;">Download Video</a>
+        </p>
+        <p id="message" style="color: green;"></p>
+    </div>
+
+    <script>
+        document.getElementById('download-button').onclick = function() {
+            const videoLink = document.getElementById('video-link').value;
+            const messageElement = document.getElementById('message');
+
+            // Check if the link is valid
+            if (videoLink) {
+                messageElement.textContent = "You can download the video using the link below:";
+                document.getElementById('actual-download').style.display = 'inline';
+            } else {
+                messageElement.textContent = "Please paste a valid YouTube video link.";
+            }
+        };
+    </script>
+</body>
+</html>
+

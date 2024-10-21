@@ -1,0 +1,55 @@
+<article>
+    <header>
+        <h1>Aticale Titele</h1> 
+        <p> Published on :<time datetime="2024-10-20">october 20, 2024</time></p>
+
+    </header>
+    <section>
+        <p> This is the main content of  the article.</p>
+    </section>
+    <footer>
+        <p>abuthr: john don</p>
+    </footer>
+</article>
+
+<form action="">
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+
+    <label for="phpn">Phone:</label>
+    <input type="tel" id="phone">
+
+    <label for="password">password:</label>
+    <input type="password" id="password">
+
+    
+    <input type="submit" id="submit">
+    <!-- <button type="submit">submit form</button> -->
+     <button type="reset">Reset From</button>
+     <button type="button" onclick="alert('button clicked')"></button>
+     <button type="button" >
+        <i class="fas fa-download"> Download</i> 
+     </button>
+
+
+</form>
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function showPosition(position) {
+        alert("Latitude: " + position.coords.latitude +
+        "\nLongitude: " + position.coords.longitude);
+    }
+</script>
+
+<button onclick="getLocation()">Get My Location</button>
+<div data-user-id="123" data-role="admin">User Info</div>
